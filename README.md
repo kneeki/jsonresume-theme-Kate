@@ -5,14 +5,14 @@ Tries to fit as much information as possible onto a single page without making s
 
 ## Table of Contents
 
-* [Disclaimer](#Disclaimer)
-* [Migration](#Migration)
-* [Example](#Example)
-* [Running](#Running)
-* [Options](#Options)
-* [License](#License)
+* [Origional Work](#origional-work)
+* [Migration](#migration)
+* [Example](#example)
+* [Running](#running)
+* [Options](#options)
+* [License](#license)
 
-## Disclaimer
+## Origional Work
 This JSON resume theme is a modification of [Ainsley Chong's onepage](https://github.com/ainsleyc/jsonresume-theme-onepage) theme.
 
 ## Example

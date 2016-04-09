@@ -1,19 +1,14 @@
 <!doctype html>
 <html>
     <head>
-
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
-
         <title>{{resume.basics.name}}</title>
-
         <style>
             {{{css}}}
         </style>
-
     </head>
     <body>
-
         <div class='resume'>
             {{#resume.basics}}
             <div id='nameBlock' class='largeFont'>
@@ -297,21 +292,35 @@
                 </div>
                 <div class='sectionContent'>
                     {{#each resume.interests}}
-                    <span class='name'>{{name}}</span><!--
-{{#if keywords.length}}
---><span class='keywords'> <em>[
+                    <span class='name'>{{name}}</span>
+                    <!--{{#if keywords.length}}-->
+                    <span class='keywords'> <em>[
                     {{#each keywords}}
-                    {{.}}<!--
--->{{#unless @last}}, {{/unless}}
+                    {{.}}
+                    {{#unless @last}}, {{/unless}}
                     {{/each}}
-                    ]</em></span><!--
-{{/if}}
--->{{#unless @last}}<span>, </span>{{/unless}}
+                    ]</em></span>
+                    <!--{{/if}}-->
+                    {{#unless @last}}<span>, </span>{{/unless}}
                     {{/each}}
                 </div>
                 <div class='sectionLine'></div>
             </div>
             {{/if}}
 
-            </body>
-        </html>
+            {{#if resume.references.length}}
+            <div id='references' class="sectionBlock">
+                <div class='sectionName'>
+                    <span>REFERENCES</span>
+                </div>
+                <div class='sectionContent'>
+                    {{#each resume.references}}
+                    <span class='name'>{{name}}</span> - <em class='reference'>{{reference}}</em>
+                    {{/each}}
+                </div>
+                <div class='sectionLine'></div>
+            </div>
+            {{/if}}
+        </div> <!-- // Container -->
+    </body>
+</html>

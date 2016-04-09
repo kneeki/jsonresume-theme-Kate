@@ -160,12 +160,8 @@
                         {{#if website}}
                         <div class='website'><a href='{{website}}'>{{website}}</a></div>
                         {{/if}}
-                        {{#if highlights.length}}
-                        <ul class='highlights'>
-                            {{#each highlights}}
-                            <li>{{.}}</li>
-                            {{/each}}
-                        </ul>
+                        {{#if summary}}
+                        <i>{{summary}}</i>
                         {{/if}}
                     </div>
                     {{#unless @last}}<div class='separator'></div>{{/unless}}

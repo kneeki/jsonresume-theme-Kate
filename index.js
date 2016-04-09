@@ -16,7 +16,7 @@ function render(resume) {
             "publications"
         ],
         css = fs.readFileSync(__dirname + "/style.css", "utf-8"),
-        tpl = fs.readFileSync(__dirname + "/resume.template", "utf-8");
+        tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
     
     // Split courses into 3 columns
     if (validateArray(resume.education)) {

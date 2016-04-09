@@ -20,7 +20,7 @@ li {
 a {
     text-decoration: none;
 }
-#resume {
+.resume {
     margin: 0 auto;
     max-width: 600px;
     padding: 80px 100px;
@@ -35,16 +35,16 @@ a {
     display: inline-block;
 }
 .largeFont {
-    font-size: 20px;
+    font: 20px Helvetica;
 }
 .smallFont {
-    font-size: 12px;
+    font: 12px Verdana;
 }
 .sectionName {
     width: 100%;
     vertical-align: top;
     display: inline-block;
-    font-size: 140%;
+    font: 140% Helvetica, Arial;
     text-transform: uppercase;
     color: #BC1B39;
     font-weight: 400;
@@ -94,7 +94,7 @@ a {
         margin: 0;
         font-size: 14px;
     }
-    #resume {
+    .resume {
         margin: 0 auto;
         max-width: 600px;
         padding: 0.5em 1em;
@@ -117,7 +117,7 @@ a {
     }
 }
 @media print {
-    #resume {
+    .resume {
         margin: auto;
         max-width: 600px;
         padding: 0px 0px;

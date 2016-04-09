@@ -312,7 +312,8 @@
                 </div>
                 <div class='sectionContent'>
                     {{#each resume.references}}
-                    <p><span class='name'>{{name}}</span> - <em class='reference'>{{reference}}</em></p>
+                    <span class='name'>{{name}}</span> - <em class='reference'>{{reference}}</em>
+                    {{#unless @last}}<div class='separator'></div>{{/unless}}
                     {{/each}}
                 </div>
             </div>

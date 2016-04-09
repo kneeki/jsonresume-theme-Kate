@@ -1,0 +1,21 @@
+{
+  "name": "jsonresume-theme-kate",
+  "version": "0.0.1",
+  "description": "A modified version of Ainsley Chong's onepage; a compact, printable theme for JSON Resume",
+  "author": "Dave Tacker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kneeki/jsonresume-theme-Kate.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4",
+    "css": "2.2.x"
+  },
+  "bugs": {
+    "url": "https://github.com/kneeki/jsonresume-theme-Kate/issues"
+  },
+  "homepage": "https://github.com/kneeki/jsonresume-theme-Kate",
+  "main": "index.js",
+  "devDependencies": {}
+}

@@ -151,20 +151,21 @@
                 <div class='sectionContent'>
                     {{#each resume.volunteer}}
                     <div class='blockHeader'>
-                        <span class='title'>{{#if organization}}{{organization}}{{/if}}{{#if position}}, {{position}}{{/if}}</span>
-                        {{#if startDate}}
-                        <span class='date'>
-                            {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
-                        </span>
-                        {{/if}}
+                        <h4 class='volunteerhead'>
+                            <span class='title'>{{#if organization}}{{organization}}{{/if}}{{#if position}}, {{position}}{{/if}}</span>
+                            {{#if startDate}}
+                            <span class='date'>
+                                {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
+                            </span>
+                            {{/if}}
+                        </h4>
                         {{#if website}}
                         <div class='website'><a href='{{website}}'>{{website}}</a></div>
                         {{/if}}
                         {{#if summary}}
-                        <br /><i>{{summary}}</i>
+                        <p class='volunteersummary'><i>{{summary}}</i></p>
                         {{/if}}
                     </div>
-                    {{#unless @last}}<div class='separator'></div>{{/unless}}
                     {{/each}}
                 </div>
             </div>

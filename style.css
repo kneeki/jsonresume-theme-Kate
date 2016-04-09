@@ -64,6 +64,7 @@ a {
 }
 .sectionContent .date {
     float: right;
+    font-weight: normal;
 }
 .sectionContent .separator {
     height: 5px;
@@ -89,6 +90,12 @@ a {
 }
 .skillBlock {
     margin-bottom: 4px;
+}
+.volunteerhead {
+    margin-bottom: 0;
+}
+.volunteersummary {
+    margin: 0;
 }
 
 /* Media Queries */

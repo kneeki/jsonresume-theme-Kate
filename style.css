@@ -83,6 +83,10 @@ a {
 .summary {
     margin-top: 6px;
 }
+.worksummary {
+    margin-top: 0;
+    padding: 0 15px 0 15px;
+}
 .skillBlock {
     margin-bottom: 4px;
 }

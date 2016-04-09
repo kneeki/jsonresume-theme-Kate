@@ -228,11 +228,9 @@
                         {{/if}}
                     </div>
                     {{#if highlights.length}}
-                    <ul class='highlights'>
                         {{#each highlights}}
-                        <li>{{.}}</li>
+                        <em>{{.}}</em>
                         {{/each}}
-                    </ul>
                     {{/if}}
                     {{#unless @last}}<div class='separator'></div>{{/unless}}
                     {{/each}}
@@ -315,10 +313,9 @@
                 </div>
                 <div class='sectionContent'>
                     {{#each resume.references}}
-                    <span class='name'>{{name}}</span> - <em class='reference'>{{reference}}</em>
+                    <p><span class='name'>{{name}}</span> - <em class='reference'>{{reference}}</em></p>
                     {{/each}}
                 </div>
-                <div class='sectionLine'></div>
             </div>
             {{/if}}
         </div> <!-- // Container -->

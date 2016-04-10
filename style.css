@@ -10,9 +10,13 @@ em {
 p {
     line-height: 1.4;
     margin-bottom: 0;
+    text-indent: 15px;
 }
 ul {
     margin-bottom: 0;
+    padding-left: 20px;
+    margin-top: 6px;
+    list-style-type: circle;
 }
 li {
     margin-bottom: 2px;
@@ -47,26 +51,15 @@ a {
     font: 140% Helvetica, Arial;
     text-transform: uppercase;
     color: #BC1B39;
-    font-weight: 400;
 }
-.sectionContent {
-    width: 100%;
-    vertical-align: top;
-    display: inline-block
-}
-.sectionContent ul {
-    padding-left: 20px;
-    margin-top: 6px;
-    list-style-type: circle;
-}
-.sectionContent .title {
+.title {
     font-weight: bold;
 }
-.sectionContent .date {
+.date {
     float: right;
     font-weight: normal;
 }
-.sectionContent .separator {
+.separator {
     height: 5px;
 }
 .sectionLine {
@@ -97,47 +90,25 @@ a {
 .volunteersummary {
     margin: 0;
 }
-
-/* Media Queries */
-
-@media only screen and (max-width: 40em) {
-    body {
-        margin: 0;
-        font-size: 14px;
-    }
-    .resume {
-        margin: 0 auto;
-        max-width: 600px;
-        padding: 0.5em 1em;
-        border: none;
-    }
-    .sectionContent {
-        width: 100%;
-    }
-    .sectionContent .date {
-        padding-right: 2em;
-    }
-    .sectionName {
-        width: auto;
-    }
-    .largeFont {
-        font-size: 20px;
-    }
-    .smallFont {
-        font-size: 14px;
-    }
-}
+/*
+ * Set some print settings. We're going to try and enforce 1" margins.
+*/
 @media print {
+    @page {
+        size: letter portrait;
+        margin: 25mm 25mm 25mm 25mm;
+    }
     .resume {
-        margin: auto;
-        max-width: 600px;
-        padding: 0px 0px;
+        max-width: 100%;
         border: 0px;
         background: #fff;
         box-shadow: none;
         -webkit-box-shadow: none;
     }
-    body {
-        /*                    margin: 0mm 25mm 25mm 25mm; */
+    body,
+    html,
+    .resume {
+        margin: 0px;
+        padding: 0px;
     }
 }

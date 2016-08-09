@@ -208,19 +208,17 @@
             {{/if}}
 
             {{#if resume.interests.length}}
-            {{#each resume.interests}}
-            <div class='sectionName' style='{{#unless @first}}margin-top: 10px;{{/unless}}'>
-                {{name}}
-            </div>
-            <span class='keywords'>
-                {{#each keywords}}
-                {{.}}
-                {{#unless @last}}, {{/unless}}
+                {{#each resume.interests}}
+                    <div class='sectionName' style='{{#unless @first}}margin-top: 10px;{{/unless}}'>
+                        {{name}}
+                    </div>
+                    <span class='keywords'>
+                        {{#each keywords}}
+                            {{.}}{{#unless @last}}, {{/unless}}
+                        {{/each}}
+                    </span>
                 {{/each}}
-            </span>
-            {{#unless @last}}<span>, </span>{{/unless}}
-            {{/each}}
-            <div class='sectionLine'></div>
+                <div class='sectionLine'></div>
             {{/if}}
 
             {{#if resume.references.length}}

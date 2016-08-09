@@ -16,7 +16,7 @@ function render(resume) {
             "publications"
         ],
         css = fs.readFileSync(__dirname + "/style.css", "utf-8"),
-        tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
+        template = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
 
     // Split resume.education.courses into (int)COURSES_COLUMNS columns
     if (validateArray(resume.education)) {
@@ -64,7 +64,7 @@ function render(resume) {
         }
     });
 
-    return Handlebars.compile(tpl)({
+    return Handlebars.compile(template)({
         css: css,
         resume: resume
     });

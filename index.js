@@ -46,7 +46,7 @@ function render(resume) {
     // Should we be sorting the resume.interests[i].keywords
     if (SORT_INTERESTS_KEYWORDS && validateArray(resume.interests)) {
         resume.interests.forEach(function (i) {
-            resume.interests[i].sort();
+            resume.interests[i].keywords.sort();
         });
     }
 

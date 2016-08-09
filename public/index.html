@@ -1,0 +1,75 @@
+Theme returned an error.<pre>TypeError: Cannot read property 'sort' of undefined
+    at /home/ubuntu/theme-manager/themes/jsonresume-theme-kate/0.2.0/index.js:49:32
+    at Array.forEach (native)
+    at Object.render (/home/ubuntu/theme-manager/themes/jsonresume-theme-kate/0.2.0/index.js:48:26)
+    at /home/ubuntu/theme-manager/lib/theme.js:23:43
+    at tryCatcher (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:497:31)
+    at Promise._settlePromise (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:555:18)
+    at Promise._settlePromise0 (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:600:10)
+    at Promise._settlePromises (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:683:18)
+    at Async._drainQueue (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/async.js:125:16)
+    at Async._drainQueues (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/async.js:135:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/async.js:16:14)
+    at processImmediate [as _immediateCallback] (timers.js:383:17)</pre><h3>Theme Info</h3><pre>{
+  "name": "jsonresume-theme-kate",
+  "version": "0.2.0",
+  "description": "A modified version of Ainsley Chong's onepage; a compact, printable theme for JSON Resume",
+  "author": "Dave Tacker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kneeki/jsonresume-theme-Kate.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^2.0.0-alpha.4",
+    "css": "2.2.x"
+  },
+  "bugs": {
+    "url": "https://github.com/kneeki/jsonresume-theme-Kate/issues"
+  },
+  "homepage": "https://github.com/kneeki/jsonresume-theme-Kate",
+  "main": "index.js",
+  "devDependencies": {}
+}
+</pre><p><strong>We just launched the official 0.0.0 version recently, please make sure you update before continuing.</strong></p><h3>Resume.json Validation Test</h3><pre>{
+    "errors": [
+        {
+            "code": "FORMAT",
+            "message": "email format validation failed: foo@bar",
+            "path": "#/basics/email",
+            "params": {
+                "format": "email",
+                "error": "foo@bar"
+            }
+        },
+        {
+            "code": "INVALID_TYPE",
+            "message": "invalid type: array (expected string)",
+            "path": "#/education/[0]/courses/[0]",
+            "params": {
+                "expected": "string",
+                "type": "array"
+            }
+        },
+        {
+            "code": "INVALID_TYPE",
+            "message": "invalid type: array (expected string)",
+            "path": "#/education/[0]/courses/[1]",
+            "params": {
+                "expected": "string",
+                "type": "array"
+            }
+        },
+        {
+            "code": "INVALID_TYPE",
+            "message": "invalid type: array (expected string)",
+            "path": "#/education/[0]/courses/[2]",
+            "params": {
+                "expected": "string",
+                "type": "array"
+            }
+        }
+    ],
+    "warnings": []
+}</pre>

@@ -208,11 +208,10 @@
             {{/if}}
 
             {{#if resume.interests.length}}
-            <div class='sectionName'>
-                <span>INTERESTS</span>
-            </div>
             {{#each resume.interests}}
-            <span class='name'>{{name}}</span>
+            <div class='sectionName'>
+                {{name}}
+            </div>
             <span class='keywords'>
                 {{#each keywords}}
                 {{.}}

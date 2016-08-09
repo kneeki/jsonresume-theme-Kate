@@ -33,7 +33,7 @@ You can print directly from the served html.
 
 ## Options
 
-For the "experience" and "skills" sections, you can optionally replace the "highlights" list with a "details" list with this format:
+For the "experience" and "skills" sections, you can optionally replace the "highlights" list with a "details" list with this format.
 
 ```js
 "details": [
@@ -44,7 +44,8 @@ For the "experience" and "skills" sections, you can optionally replace the "high
 ]
 ```
 
-See included resume.json for more details.
+You may toggle `SORT_INTERESTS_KEYWORDS` to alphabetically sort the keywords (useful for long arrays). See `index.js`.
+
 
 ## License
 The MIT License (MIT)

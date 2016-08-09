@@ -46,6 +46,14 @@ For the "experience" and "skills" sections, you can optionally replace the "high
 
 You may toggle `SORT_INTERESTS_KEYWORDS` to alphabetically sort the keywords (useful for long arrays). See `index.js`. The interest section is no longer denoted with a `.sectionName`. Instead, each `interest[i].name` has the `.sectionName` class.
 
+You may optionally title the `interests` section by modifying your resume.json schema to include:
+```js
+"optional_section_titles": [
+    "interests": "Optional Interests Title"
+]
+```
+See resume.json for an example.
+
 ## License
 The MIT License (MIT)
 

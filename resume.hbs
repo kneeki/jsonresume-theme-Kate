@@ -50,9 +50,35 @@
             <div class='sectionLine'></div>
             {{/if}}
 
+
+            {{#if resume.interests.length}}
+                {{#each resume.optional_section_titles.interests}}
+                    <div class='sectionName'>
+                        {{.}}
+                    </div>
+                {{/each}}
+
+                {{#each resume.interests}}
+                    <div style='float: left; width: 50%;'>
+                        <div class='sectionName' style='font-size: 1.1em; color: #000;'>
+                            {{name}}
+                        </div>
+
+                        <ul style="margin-top: 0;">
+                            {{#each keywords}}
+                                <li>{{.}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                {{/each}}
+
+                <div style="clear: both;"></div>
+                <div class='sectionLine'></div>
+            {{/if}}
+
             {{#if resume.work.length}}
             <div class='sectionName'>
-                <span>EXPERIENCE</span>
+                <span>PROFESSIONAL EXPERIENCE</span>
             </div>
             {{#each resume.work}}
             <span class='title'>
@@ -79,6 +105,28 @@
             <div class='sectionLine'></div>
             {{/if}}
 
+            {{#if resume.volunteer.length}}
+            <div class='sectionName'>
+                <span>VOLUNTEER EXPERIENCE</span>
+            </div>
+            {{#each resume.volunteer}}
+            <span class='title'>{{#if organization}}{{organization}}{{/if}}{{#if position}}, {{position}}{{/if}}</span>
+            {{#if startDate}}
+            <span class='date'>
+                {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
+            </span>
+            {{/if}}
+            {{#if website}}
+            <div class='website'><a href='{{website}}'>{{website}}</a></div>
+            {{/if}}
+            {{#if summary}}
+            <p class='volunteersummary'><i>{{summary}}</i></p>
+            {{/if}}
+            {{#unless @last}}<div class='separator'></div>{{/unless}}
+            {{/each}}
+            <div class='sectionLine'></div>
+            {{/if}}
+
             {{#if resume.publications.length}}
             <div class='sectionName'>
                 <span>PUBLICATIONS</span>
@@ -98,28 +146,6 @@
             </div>
             {{/if}}
             {{#if summary}}{{summary}}{{/if}}
-            {{#unless @last}}<div class='separator'></div>{{/unless}}
-            {{/each}}
-            <div class='sectionLine'></div>
-            {{/if}}
-
-            {{#if resume.volunteer.length}}
-            <div class='sectionName'>
-                <span>VOLUNTEERING</span>
-            </div>
-            {{#each resume.volunteer}}
-            <span class='title'>{{#if organization}}{{organization}}{{/if}}{{#if position}}, {{position}}{{/if}}</span>
-            {{#if startDate}}
-            <span class='date'>
-                {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
-            </span>
-            {{/if}}
-            {{#if website}}
-            <div class='website'><a href='{{website}}'>{{website}}</a></div>
-            {{/if}}
-            {{#if summary}}
-            <p class='volunteersummary'><i>{{summary}}</i></p>
-            {{/if}}
             {{#unless @last}}<div class='separator'></div>{{/unless}}
             {{/each}}
             <div class='sectionLine'></div>
@@ -205,20 +231,6 @@
             {{#unless @last}}<span>,</span>{{/unless}}
             {{/each}}
             <div class='sectionLine'></div>
-            {{/if}}
-
-            {{#if resume.interests.length}}
-                {{#each resume.interests}}
-                    <div class='sectionName' style='{{#unless @first}}margin-top: 10px;{{/unless}}'>
-                        {{name}}
-                    </div>
-                    <span class='keywords'>
-                        {{#each keywords}}
-                            {{.}}{{#unless @last}}, {{/unless}}
-                        {{/each}}
-                    </span>
-                {{/each}}
-                <div class='sectionLine'></div>
             {{/if}}
 
             {{#if resume.references.length}}

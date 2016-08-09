@@ -209,7 +209,7 @@
 
             {{#if resume.interests.length}}
             {{#each resume.interests}}
-            <div class='sectionName'>
+            <div class='sectionName' style='{{#unless @first}}margin-top: 10px;{{/unless}}'>
                 {{name}}
             </div>
             <span class='keywords'>

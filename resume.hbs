@@ -213,12 +213,12 @@
             </div>
             {{#each resume.interests}}
             <span class='name'>{{name}}</span>
-            <span class='keywords'> <em>
+            <span class='keywords'>
                 {{#each keywords}}
                 {{.}}
                 {{#unless @last}}, {{/unless}}
                 {{/each}}
-                </em></span>
+            </span>
             {{#unless @last}}<span>, </span>{{/unless}}
             {{/each}}
             <div class='sectionLine'></div>

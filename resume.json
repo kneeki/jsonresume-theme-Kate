@@ -110,6 +110,14 @@
                 "Unicorns",
                 "Ferrets"
             ]
+        },
+        {
+            "name": "Planets",
+            "keywords": [
+                "Saturn",
+                "Uranus",
+                "Earth"
+            ]
         }
     ],
     "optional_section_titles": {

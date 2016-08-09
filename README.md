@@ -44,8 +44,7 @@ For the "experience" and "skills" sections, you can optionally replace the "high
 ]
 ```
 
-You may toggle `SORT_INTERESTS_KEYWORDS` to alphabetically sort the keywords (useful for long arrays). See `index.js`.
-
+You may toggle `SORT_INTERESTS_KEYWORDS` to alphabetically sort the keywords (useful for long arrays). See `index.js`. The interest section is no longer denoted with a `.sectionName`. Instead, each `interest[i].name` has the `.sectionName` class.
 
 ## License
 The MIT License (MIT)

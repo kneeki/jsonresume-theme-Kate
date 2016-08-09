@@ -1,75 +1,142 @@
-Theme returned an error.<pre>TypeError: Cannot read property 'keywords' of undefined
-    at /home/ubuntu/theme-manager/themes/jsonresume-theme-kate/0.3.0/index.js:49:32
-    at Array.forEach (native)
-    at Object.render (/home/ubuntu/theme-manager/themes/jsonresume-theme-kate/0.3.0/index.js:48:26)
-    at /home/ubuntu/theme-manager/lib/theme.js:23:43
-    at tryCatcher (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/util.js:16:23)
-    at Promise._settlePromiseFromHandler (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:497:31)
-    at Promise._settlePromise (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:555:18)
-    at Promise._settlePromise0 (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:600:10)
-    at Promise._settlePromises (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/promise.js:683:18)
-    at Async._drainQueue (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/async.js:125:16)
-    at Async._drainQueues (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/async.js:135:10)
-    at Immediate.Async.drainQueues [as _onImmediate] (/home/ubuntu/theme-manager/node_modules/bluebird/js/release/async.js:16:14)
-    at processImmediate [as _immediateCallback] (timers.js:383:17)</pre><h3>Theme Info</h3><pre>{
-  "name": "jsonresume-theme-kate",
-  "version": "0.3.0",
-  "description": "A modified version of Ainsley Chong's onepage; a compact, printable theme for JSON Resume",
-  "author": "Dave Tacker",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kneeki/jsonresume-theme-Kate.git"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "handlebars": "^2.0.0-alpha.4",
-    "css": "2.2.x"
-  },
-  "bugs": {
-    "url": "https://github.com/kneeki/jsonresume-theme-Kate/issues"
-  },
-  "homepage": "https://github.com/kneeki/jsonresume-theme-Kate",
-  "main": "index.js",
-  "devDependencies": {}
-}
-</pre><p><strong>We just launched the official 0.0.0 version recently, please make sure you update before continuing.</strong></p><h3>Resume.json Validation Test</h3><pre>{
-    "errors": [
-        {
-            "code": "FORMAT",
-            "message": "email format validation failed: foo@bar",
-            "path": "#/basics/email",
-            "params": {
-                "format": "email",
-                "error": "foo@bar"
-            }
-        },
-        {
-            "code": "INVALID_TYPE",
-            "message": "invalid type: array (expected string)",
-            "path": "#/education/[0]/courses/[0]",
-            "params": {
-                "expected": "string",
-                "type": "array"
-            }
-        },
-        {
-            "code": "INVALID_TYPE",
-            "message": "invalid type: array (expected string)",
-            "path": "#/education/[0]/courses/[1]",
-            "params": {
-                "expected": "string",
-                "type": "array"
-            }
-        },
-        {
-            "code": "INVALID_TYPE",
-            "message": "invalid type: array (expected string)",
-            "path": "#/education/[0]/courses/[2]",
-            "params": {
-                "expected": "string",
-                "type": "array"
-            }
-        }
-    ],
-    "warnings": []
-}</pre>
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+<title>Foo </title>
+<style>body{background:#EEEEEE;font:12px "Times New Roman",Times,sans-serif;line-height:1.4;margin:40px 0;}em{color:#999;}p{line-height:1.4;margin-bottom:0;text-indent:15px;}ul{margin-bottom:0;padding-left:20px;margin-top:6px;list-style-type:circle;}li{margin-bottom:2px;}a{text-decoration:none;}.resume{margin:0 auto;max-width:600px;padding:80px 100px;background:#fff;border:1px solid #ccc;box-shadow:2px 2px 4px #aaa;-webkit-box-shadow:2px 2px 4px #aaa;}.coursesList{width:28%;vertical-align:top;display:inline-block;}.largeFont{font:20px Helvetica;}.smallFont{font:12px Verdana;}.sectionName{width:100%;vertical-align:top;display:inline-block;font:140% Helvetica,Arial;text-transform:uppercase;color:#BC1B39;}.title{font-weight:bold;}.date{float:right;font-weight:normal;}.separator{height:5px;}.sectionLine{border-style:dashed;border-width:1px;border-color:#CFCFCF;margin-top:10px;margin-bottom:10px;}.divider{font-weight:bold;margin-left:5px;margin-right:5px;}.summary{margin-top:6px;}.worksummary{margin-top:0;padding:0 15px 0 15px;}.skillBlock{margin-bottom:4px;}.volunteerhead{margin-bottom:0;}.volunteersummary{margin:0;}@media print {@page{size:letter portrait;margin:25mm 25mm 25mm 25mm;}.resume{max-width:100%;border:0px;background:#fff;box-shadow:none;-webkit-box-shadow:none;}body,html,.resume{margin:0px;padding:0px;}}</style>
+</head>
+<body>
+<div class='resume'>
+<div class='largeFont'>
+Foo , Programmer
+</div>
+<div class='smallFont'>
+<span class='email'><a href='/cdn-cgi/l/email-protection#0b6d64644b696a79'><span class="__cf_email__" data-cfemail="5630393916343724">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></span>
+<span class='divider'>|</span>
+<span class='phone'>(912) 555-4321</span>
+<span class='divider'>|</span>
+<span class='address'>
+San Francisco, California, US
+</span>
+<span class='url'>
+<a href='https://soundcloud.com/dandymusicnl'>https://soundcloud.com/dandymusicnl</a>
+</span>
+</div>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>SUMMARY</span>
+</div>
+<span>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</span>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>EXPERIENCE</span>
+</div>
+<span class='title'>
+Pied Piper, CEO/President
+</span>
+<span class='date'>
+2013-12-01 to 2014-12-01
+</span>
+<div><a href='http://piedpiper.com'>http://piedpiper.com</a></div>
+<p class='worksummary'>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
+<ul class='highlights'>
+<li>Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
+<li>Successfully won Techcrunch Disrupt</li>
+<li>Optimized an algorithm that holds the current world record for Weisman Scores</li>
+</ul>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>PUBLICATIONS</span>
+</div>
+<span class='title'>
+Video compression for 3d media, Hooli
+</span>
+<span class='date'>
+<span class='releaseDate'>2014-10-01</span>
+</span>
+<div class='website'>
+<a href='http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)'>http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)</a>
+</div>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>VOLUNTEERING</span>
+</div>
+<span class='title'>CoderDojo, Teacher</span>
+<span class='date'>
+2012-01-01 to 2013-01-01
+</span>
+<div class='website'><a href='http://coderdojo.com/'>http://coderdojo.com/</a></div>
+<p class='volunteersummary'><i>Global movement of free coding clubs for young people.</i></p>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>EDUCATION</span>
+</div>
+<span class='title'>
+University of Oklahoma
+</span>
+<span class='date'>
+2011-06-01 to 2014-01-01
+</span>
+Bachelor - Information Technology, GPA: 4.0
+<ul class='coursesList'>
+<li class='course'>DB1101 - Basic SQL</li>
+</ul>
+<ul class='coursesList'>
+<li class='course'>CS2011 - Java Introduction</li>
+</ul>
+<ul class='coursesList'>
+</ul>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>AWARDS</span>
+</div>
+<span class='title'>
+Digital Compression Pioneer Award, Techcrunch
+</span>
+<span class='date'>
+<span class='date'>2014-11-01</span>
+</span>
+<em>There is no spoon.</em>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>SKILLS</span>
+</div>
+<div class='skillBlock'>
+<span class='title'>Web Development:</span>
+<span>HTML</span>,
+<span>CSS</span>,
+<span>Javascript</span>
+</div>
+<div class='skillBlock'>
+<span class='title'>Compression:</span>
+<span>Mpeg</span>,
+<span>MP4</span>,
+<span>GIF</span>
+</div>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>LANGUAGES</span>
+</div>
+<span class='language'>English</span>
+<span class='fluency'><em>(Native speaker)</em></span>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>INTERESTS</span>
+</div>
+<span class='name'>Wildlife</span>
+<span class='keywords'>
+Dinosaurs
+,
+Ferrets
+,
+Unicorns
+</span>
+<div class='sectionLine'></div>
+<div class='sectionName'>
+<span>REFERENCES</span>
+</div>
+<span class='name'>Erlich Bachman</span> - <em class='reference'>It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company.</em>
+</div>  
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>

@@ -1,16 +1,19 @@
 # jsonresume-theme-Kate
-A compact theme for JSON Resume, designed for printing. 
+A compact theme for JSON Resume, designed for printing.
 
 Tries to fit as much information as possible onto a single page without making sections look cluttered.
 
 ## Table of Contents
 
+* [Preview](#preview)
 * [Origional Work](#origional-work)
-* [Migration](#migration)
 * [Example](#example)
 * [Running](#running)
 * [Options](#options)
 * [License](#license)
+
+## Preview
+![Preview](preview.png)
 
 ## Origional Work
 This JSON resume theme is a modification of [Ainsley Chong's onepage](https://github.com/ainsleyc/jsonresume-theme-onepage) theme.

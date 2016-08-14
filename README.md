@@ -24,9 +24,12 @@ http://themes.jsonresume.org/theme/kate
 ## Running
 
 ```sh
+# If you need to install Node.js:
+#    sudo apt-get install npm
 sudo npm install -g resume-cli
 git clone https://github.com/kneeki/jsonresume-theme-Kate.git
 cd jsonresume-theme-kate
+sudo npm install
 resume serve
 ```
 You can print directly from the served html.

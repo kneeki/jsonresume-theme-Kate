@@ -6,7 +6,6 @@ Tries to fit as much information as possible onto a single page without making s
 ## Table of Contents
 
 * [Preview](#preview)
-* [Origional Work](#origional-work)
 * [Example](#example)
 * [Running](#running)
 * [Options](#options)
@@ -14,9 +13,6 @@ Tries to fit as much information as possible onto a single page without making s
 
 ## Preview
 ![Preview](preview.png)
-
-## Origional Work
-This JSON resume theme is a modification of [Ainsley Chong's onepage](https://github.com/ainsleyc/jsonresume-theme-onepage) theme.
 
 ## Example
 http://themes.jsonresume.org/theme/kate
@@ -60,7 +56,7 @@ See resume.json for an example.
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2015 Ainsley Chong
+Copyright (c) 2015 Dave Tacker
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

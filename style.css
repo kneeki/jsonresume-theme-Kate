@@ -4,25 +4,18 @@ body {
     line-height: 1.4;
     margin: 40px 0;
 }
-em {
-    color: #999;
-}
-p {
-    line-height: 1.4;
-    margin-bottom: 0;
-    text-indent: 15px;
-}
 ul {
     margin-bottom: 0;
     padding-left: 20px;
-    margin-top: 6px;
+    margin-top: 2px;
     list-style-type: circle;
 }
 li {
     margin-bottom: 2px;
 }
 a {
-    text-decoration: none;
+    text-decoration: underline;
+    color: #000;
 }
 .resume {
     margin: 0 auto;
@@ -32,11 +25,6 @@ a {
     border: 1px solid #ccc;
     box-shadow: 2px 2px 4px #aaa;
     -webkit-box-shadow: 2px 2px 4px #aaa;
-}
-.coursesList {
-    width: 28%;
-    vertical-align: top;
-    display: inline-block;
 }
 .largeFont {
     font: 20px Helvetica;
@@ -48,16 +36,15 @@ a {
     width: 100%;
     vertical-align: top;
     display: inline-block;
-    font: 140% Helvetica, Arial;
+    font: 120% Helvetica, Arial;
     text-transform: uppercase;
-    color: #BC1B39;
 }
 .title {
     font-weight: bold;
 }
 .date {
     float: right;
-    font-weight: normal;
+    font-weight: bold;
 }
 .separator {
     height: 5px;
@@ -74,21 +61,24 @@ a {
     margin-left: 5px;
     margin-right: 5px;
 }
-.summary {
-    margin-top: 6px;
+span[toggle='true'] {
+    display: inline-block;
 }
-.worksummary {
-    margin-top: 0;
-    padding: 0 15px 0 15px;
+span[section='true'] {
+    display: block;
 }
-.skillBlock {
-    margin-bottom: 4px;
+.controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    max-width: 300px;
+    width: 300px;
 }
-.volunteerhead {
+ul > li > h4 {
     margin-bottom: 0;
 }
-.volunteersummary {
-    margin: 0;
+.clearfix {
+    clear: both;
 }
 /*
  * Set some print settings. We're going to try and enforce 1" margins.
@@ -110,5 +100,8 @@ a {
     .resume {
         margin: 0px;
         padding: 0px;
+    }
+    .controls {
+        display: none;
     }
 }

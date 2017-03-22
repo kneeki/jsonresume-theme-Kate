@@ -9,6 +9,75 @@
         </style>
     </head>
     <body>
+        <div class="controls">
+            <h3>Display</h3>
+            <hr>
+            <ul style="list-style-type: none;">
+                <li>
+                    <h4>Experience</h4>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience')" checked> Block
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience_salary')" checked> Salary
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience_hours')" checked> Hours
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience_dates')" checked> Dates
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience_address')" checked> Address
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience_website')" checked> Website
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience_supervisor')" checked> Supervisor
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('experience_contact_phone')" checked> Contact Phone
+                </li>
+                <li>
+                    <h4>Volunteer</h4>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('volunteer')" checked> Block
+                </li>
+                <li>
+                    <h4>Awards</h4>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('awards')" checked> Block
+                </li>
+                <li>
+                    <h4>Education</h4>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('education')" checked> Block
+                </li>
+                <li>
+                    <h4>Publications</h4>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('publications')" checked> Block
+                </li>
+                <li>
+                    <h4>Languages</h4>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('languages')" checked> Block
+                </li>
+                <li>
+                    <h4>References</h4>
+                </li>
+                <li>
+                    <input type="checkbox" onclick="toggle('references')" checked> Block
+                </li>
+            </ul>
+        </div>
         <div class="resume">
             {{#resume.basics}}
             <div class="largeFont">
@@ -25,7 +94,7 @@
                 {{#location}}
                 <span class="divider">|</span>
                 <span class="address">
-                    {{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}{{#if countryCode}}, {{countryCode}}{{/if}}
+                    {{#if city}}{{city}}{{/if}}{{#if region}}, {{region}}{{/if}}
                 </span>
                 {{/location}}
                 {{#if profiles.length}}
@@ -50,158 +119,6 @@
             <div class="sectionLine"></div>
             {{/if}}
 
-
-            {{#if resume.interests.length}}
-            {{#each resume.optional_section_titles.interests}}
-            <div class="sectionName">
-                {{.}}
-            </div>
-            {{/each}}
-
-            {{#each resume.interests}}
-            <div style="float: left; width: 50%;">
-                <div class="sectionName" style="font-size: 1.1em; color: #000;">
-                    {{name}}
-                </div>
-
-                <ul style="margin-top: 0;">
-                    {{#each keywords}}
-                    <li>{{.}}</li>
-                    {{/each}}
-                </ul>
-            </div>
-            {{/each}}
-
-            <div style="clear: both;"></div>
-            <div class="sectionLine"></div>
-            {{/if}}
-
-            {{#if resume.work.length}}
-            <div class="sectionName">
-                <span>PROFESSIONAL EXPERIENCE</span>
-            </div>
-            {{#each resume.work}}
-            <span class="title">
-                {{#if company}}{{company}}{{/if}}{{#if position}}, {{position}}{{/if}}
-            </span>
-            {{#if startDate}}
-            <span class="date">
-                {{#if salary}}{{salary}}, {{/if}} {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
-            </span>
-            {{/if}}
-            <div><a href="{{website}}">{{website}}</a>{{#if address}}, {{address}}{{/if}}{{#if supervisor}}, {{supervisor}}{{/if}}{{#if contact_phone}}: {{contact_phone}}{{/if}}</div>
-            {{#if summary}}
-            <p class="worksummary">{{summary}}</p>
-            {{/if}}
-            {{#if highlights.length}}
-            <ul class="highlights">
-                {{#each highlights}}
-                <li>{{.}}</li>
-                {{/each}}
-            </ul>
-            {{/if}}
-            {{#unless @last}}<div class="separator"></div>{{/unless}}
-            {{/each}}
-            <div class="sectionLine"></div>
-            {{/if}}
-
-            {{#if resume.volunteer.length}}
-            <div class="sectionName">
-                <span>VOLUNTEER EXPERIENCE</span>
-            </div>
-            {{#each resume.volunteer}}
-            <span class="title">{{#if organization}}{{organization}}{{/if}}{{#if position}}, {{position}}{{/if}}</span>
-            {{#if startDate}}
-            <span class="date">
-                {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
-            </span>
-            {{/if}}
-            {{#if website}}
-            <div class="website"><a href="{{website}}">{{website}}</a></div>
-            {{/if}}
-            {{#if summary}}
-            <p class="volunteersummary"><i>{{summary}}</i></p>
-            {{/if}}
-            {{#unless @last}}<div class="separator"></div>{{/unless}}
-            {{/each}}
-            <div class="sectionLine"></div>
-            {{/if}}
-
-            {{#if resume.publications.length}}
-            <div class="sectionName">
-                <span>PUBLICATIONS</span>
-            </div>
-            {{#each resume.publications}}
-            <span class="title">
-                {{#if name}}{{name}}{{/if}}{{#if publisher}}, {{publisher}}{{/if}}
-            </span>
-            {{#if releaseDate}}
-            <span class="date">
-                <span class="releaseDate">{{releaseDate}}</span>
-            </span>
-            {{/if}}
-            {{#if website}}
-            <div class="website">
-                <a href="{{website}}">{{website}}</a>
-            </div>
-            {{/if}}
-            {{#if summary}}{{summary}}{{/if}}
-            {{#unless @last}}<div class="separator"></div>{{/unless}}
-            {{/each}}
-            <div class="sectionLine"></div>
-            {{/if}}
-
-            {{#if resume.education.length}}
-            <div class="sectionName">
-                <span>EDUCATION</span>
-            </div>
-            {{#each resume.education}}
-            <span class="title">
-                {{#if institution}}{{institution}}{{/if}}
-            </span>
-            {{#if startDate}}
-            <span class="date">
-                {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
-            </span>
-            {{/if}}
-            {{#if studyType}}{{studyType}} {{/if}} - {{#if area}}{{area}}{{/if}}{{#if gpa}}, GPA: {{gpa}}{{/if}}
-            {{#if courses.length}}
-            {{#each courses}}
-            <ul class="coursesList">
-                {{#each .}}
-                <li class="course">{{.}}</li>
-                {{/each}}
-            </ul>
-            {{/each}}
-            {{/if}}
-            {{#unless @last}}<div class="separator"></div>{{/unless}}
-            {{/each}}
-            <div class="sectionLine"></div>
-            {{/if}}
-
-            {{#if resume.awards.length}}
-            <div class="sectionName">
-                <span>AWARDS</span>
-            </div>
-            {{#each resume.awards}}
-            <span class="title">
-                {{#if title}}{{title}}{{/if}}{{#if awarder}}, {{awarder}}{{/if}}
-            </span>
-            {{#if date}}
-            <span class="date">
-                <span class="date">{{date}}</span>
-            </span>
-            {{/if}}
-            {{#if highlights.length}}
-            {{#each highlights}}
-            <em>{{.}}</em>
-            {{/each}}
-            {{/if}}
-            {{#unless @last}}<div class="separator"></div>{{/unless}}
-            {{/each}}
-            <div class="sectionLine"></div>
-            {{/if}}
-
             {{#if resume.skills.length}}
             <div class="sectionName">
                 <span>SKILLS</span>
@@ -219,29 +136,281 @@
             <div class="sectionLine"></div>
             {{/if}}
 
-            {{#if resume.languages.length}}
+            {{#if resume.interests.length}}
+            {{#each resume.optional_section_titles.interests}}
             <div class="sectionName">
-                <span>LANGUAGES</span>
+                {{.}}
             </div>
-            {{#each resume.languages}}
-            <span class="language">{{language}}</span>
-            {{#if fluency}}
-            <span class="fluency"><em>({{fluency}})</em></span>
-            {{/if}}
-            {{#unless @last}}<span>,</span>{{/unless}}
             {{/each}}
+
+            {{#each resume.interests}}
+            <div style="float: left; width: 50%;">
+                <div class="sectionName" style="font-size: 1em; color: #000;">
+                    {{name}}
+                </div>
+
+                <ul style="margin-top: 0;">
+                    {{#each keywords}}
+                    <li>{{.}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/each}}
+
+            <div class="clearfix"></div>
             <div class="sectionLine"></div>
             {{/if}}
 
+
+            <div class="clearfix"></div>
+
+            {{#if resume.work.length}}
+            <span section='true' toggle='true' data-id="experience">
+                <div class="sectionName">
+                    <span>PROFESSIONAL EXPERIENCE</span>
+                </div>
+                {{#each resume.work}}
+                <span class="title">
+                    {{#if position}}{{position}}{{/if}}
+
+                    <span style="float: right;">
+                        <span style="font-weight: normal">
+                            <span toggle='true' data-id="experience_hours">
+                                {{#if hours}}{{hours}}{{#if salary}},{{/if}}{{/if}}
+                            </span>
+                            <span toggle='true' data-id="experience_salary">
+                                {{#if salary}}{{salary}}{{#if startDate}}, {{/if}}{{/if}}
+                            </span>
+                        </span>
+
+                        <span toggle='true' data-id="experience_dates">
+                            {{#if startDate}}{{startDate}}{{/if}}
+                            {{#if endDate}}to{{/if}}
+                            {{#if endDate}}{{endDate}}{{/if}}
+                        </span>
+                    </span>
+
+                    {{#if company}}<br />{{company}}{{/if}}
+
+                    <span style="font-weight: normal; float: right;">
+                        <span toggle='true' data-id="experience_website">
+                            <a href="{{website}}">{{website}}</a>
+                        </span>
+                        <span toggle='true' data-id="experience_address">
+                            {{#if address}}{{address}}{{#if supervisor}}, {{/if}}{{/if}}
+                        </span>
+                        <span toggle='true' data-id="experience_supervisor">
+                            {{#if supervisor}}{{supervisor}}{{#if contact_phone}}: {{/if}}{{/if}}
+                        </span>
+                        <span toggle='true' data-id="experience_contact_phone">
+                            {{#if contact_phone}}{{contact_phone}}{{/if}}
+                        </span>
+                    </span>
+                </span>
+
+                {{#if summary}}
+                <p class="worksummary">{{summary}}</p>
+                {{/if}}
+                {{#if highlights.length}}
+                <ul class="highlights">
+                    {{#each highlights}}
+                    <li>{{.}}</li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+                {{#unless @last}}<div class="separator"></div>{{/unless}}
+                {{/each}}
+                <div class="sectionLine"></div>
+            </span>
+
+            <div class="clearfix"></div>
+            {{/if}}
+
+
+            {{#if resume.volunteer.length}}
+            <span section='true' toggle='true' data-id="volunteer">
+                <div class="sectionName">
+                    <span>VOLUNTEER EXPERIENCE</span>
+                </div>
+                {{#each resume.volunteer}}
+                <span class="title">
+                    {{#if organization}}{{organization}}{{/if}}{{#if position}}, {{position}}{{/if}}
+                    {{#if startDate}}
+                    <span class="date">
+                        {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
+                    </span>
+                    {{/if}}
+                </span>
+                {{#if website}}
+                <div class="website"><a href="{{website}}">{{website}}</a></div>
+                {{/if}}
+                {{#if summary}}
+                <p class="volunteersummary">{{summary}}</p>
+                {{/if}}
+
+                {{#if highlights.length}}
+                <ul class="highlights">
+                    {{#each highlights}}
+                    <li>{{.}}</li>
+                    {{/each}}
+                </ul>
+                {{/if}}
+
+                {{#unless @last}}<div class="separator"></div>{{/unless}}
+                {{/each}}
+                <div class="sectionLine"></div>
+            </span>
+
+            <div class="clearfix"></div>
+            {{/if}}
+
+
+            {{#if resume.publications.length}}
+            <span section='true' toggle='true' data-id="publications">
+                <div class="sectionName">
+                    <span>PUBLICATIONS</span>
+                </div>
+                {{#each resume.publications}}
+                <span class="title">
+                    {{#if name}}{{name}}{{/if}}{{#if publisher}}, {{publisher}}{{/if}}
+                </span>
+                {{#if releaseDate}}
+                <span class="date">
+                    <span class="releaseDate">{{releaseDate}}</span>
+                </span>
+                {{/if}}
+                {{#if website}}
+                <div class="website">
+                    <a href="{{website}}">{{website}}</a>
+                </div>
+                {{/if}}
+                {{#if summary}}{{summary}}{{/if}}
+                {{#unless @last}}<div class="separator"></div>{{/unless}}
+                {{/each}}
+                <div class="sectionLine"></div>
+            </span>
+
+            <div class="clearfix"></div>
+            {{/if}}
+
+
+            {{#if resume.education.length}}
+            <span section='true' toggle='true' data-id="education" style="display: block">
+                <div class="sectionName">
+                    <span>EDUCATION</span>
+                </div>
+                {{#each resume.education}}
+                <span class="title">
+                    {{#if studyType}}{{studyType}} {{/if}} - {{#if area}}{{area}}{{/if}}{{#if gpa}}, GPA: {{gpa}}{{/if}}
+                    {{#if startDate}}
+                    <span class="date">
+                        {{#if startDate}}{{startDate}}{{/if}} to {{#if endDate}}{{endDate}}{{else}}Present{{/if}}
+                    </span>
+                    {{/if}}
+                </span>
+                {{#if institution}}<br />{{institution}}{{/if}}
+                {{#if courses.length}}
+                {{#each courses}}
+                <ul class="coursesList">
+                    {{#each .}}
+                    <li class="course">{{.}}</li>
+                    {{/each}}
+                </ul>
+                {{/each}}
+                {{/if}}
+                {{#unless @last}}<div class="separator"></div>{{/unless}}
+                {{/each}}
+                <div class="sectionLine"></div>
+            </span>
+
+            <div class="clearfix"></div>
+            {{/if}}
+
+
+            {{#if resume.awards.length}}
+            <span section='true' toggle='true' data-id="awards">
+                <div class="sectionName">
+                    <span>AWARDS</span>
+                </div>
+                {{#each resume.awards}}
+                <span class="title">
+                    {{#if title}}{{title}}{{/if}}
+                </span>
+
+
+                {{#if date}}
+                <span class="date">
+                    {{date}}
+                </span>
+                {{/if}}
+
+
+                {{#if highlights}}
+                <ul class="highlights">
+                    <li>{{highlights}}</li>
+                </ul>
+                {{/if}}
+
+                {{#unless @last}}<div class="separator"></div>{{/unless}}
+                {{/each}}
+
+
+                <div class="sectionLine"></div>
+            </span>
+
+            <div class="clearfix"></div>
+            {{/if}}
+
+
+            {{#if resume.languages.length}}
+            <span section='true' toggle='true' data-id="languages">
+                <div class="sectionName">
+                    <span>LANGUAGES</span>
+                </div>
+                {{#each resume.languages}}
+                <span class="language">{{language}}</span>
+                {{#if fluency}}
+                <span class="fluency"><em>({{fluency}})</em></span>
+                {{/if}}
+                {{#unless @last}}<span>,</span>{{/unless}}
+                {{/each}}
+                <div class="sectionLine"></div>
+            </span>
+
+            <div class="clearfix"></div>
+            {{/if}}
+
+
             {{#if resume.references.length}}
-            <div class="sectionName">
-                <span>REFERENCES</span>
-            </div>
-            {{#each resume.references}}
-            <span class="name">{{name}}</span> - <em class="reference">{{reference}}</em>
-            {{#unless @last}}<div class="separator"></div>{{/unless}}
-            {{/each}}
+            <span section='true' toggle='true' data-id="references">
+                <div class="sectionName">
+                    <span>REFERENCES</span>
+                </div>
+                {{#each resume.references}}
+                <span class="name">{{name}}</span> - <em class="reference">{{reference}}</em>
+                {{#unless @last}}<div class="separator"></div>{{/unless}}
+                {{/each}}
+            </span>
             {{/if}}
         </div> <!-- // Container -->
+
+        <script type="text/javascript">
+            function toggle(selector) {
+                var elements = document.querySelectorAll('[data-id="' + selector + '"]');
+
+                if (elements.length > 0) {
+                    elements.forEach(function (spanBlock) {
+                        var style = window.getComputedStyle(spanBlock),
+                            display = style.getPropertyValue('display');
+
+                        if (display === "inline-block") {
+                            spanBlock.style.display = "none";
+                        } else {
+                            spanBlock.style.display = "inline-block";
+                        }
+                    })
+                }
+            }
+        </script>
     </body>
 </html>
